@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            position: relative;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .note-category {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Paper-like shadow */
+            background: url('https://www.transparenttextures.com/patterns/paper-1.png'); /* Paper texture */
+        }
+
+        .note-category h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #search input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        #search-results {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .topic {
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: none;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .topic:hover {
+            text-decoration: underline;
+        }
+
+        .topic.active {
+            font-weight: bold; /* Make clicked topic bold */
+        }
+
+        .content-section {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .paper-note {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Paper-like shadow */
+            background: url('https://www.transparenttextures.com/patterns/paper-1.png'); /* Paper texture */
+            margin-bottom: 20px;
+        }
+
+        /* Watermark Style */
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.1);
+            transform: rotate(-45deg);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Python Notes</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Learn Python with Us!</h2>
+        <p>Welcome to our comprehensive guide on Python programming. Whether you’re a beginner or looking to enhance your skills, we provide notes on all the key topics of Python programming. From syntax to advanced concepts, our notes are designed to help you master Python in no time!</p>
+        <p>Start with the basics or dive into advanced topics. You can also search for specific Python topics or get in touch with us if you need additional help.</p>
+    </section>
+
+    <section id="notes">
+        <h2>Python Notes</h2>
+        <div class="note-category">
+            <h3>Basic Syntax</h3>
+            <ul>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('intro-to-python', this)">Introduction to Python</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('variables-and-data-types', this)">Variables and Data Types</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('loops-and-conditions', this)">Loops and Conditions</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('operators', this)">Operators</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('input-and-output', this)">Input and Output</a></li>
+            </ul>
+        </div>
+
+        <div class="note-category">
+            <h3>Advanced Concepts</h3>
+            <ul>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('functions', this)">Functions</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('classes-and-objects', this)">Classes and Objects</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('modules', this)">Modules and Packages</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('exception-handling', this)">Exception Handling</a></li>
+                <li><a href="javascript:void(0);" class="topic" onclick="toggleSection('file-handling', this)">File Handling</a></li>
+            </ul>
+        </div>
+
+        <div id="intro-to-python" class="content-section paper-note">
+            <h3>Introduction to Python</h3>
+            <p>Python is a high-level programming language designed for readability and simplicity. It's easy to learn and versatile, used for web development, data science, automation, and more. In this section, we’ll cover how to install Python and run your first Python program.</p>
+        </div>
+
+        <div id="variables-and-data-types" class="content-section paper-note">
+            <h3>Variables and Data Types</h3>
+            <p>In Python, variables are used to store data. Python has several built-in data types such as integers, floats, strings, and booleans. Learn how to declare and use variables, and how to handle different data types in Python.</p>
+        </div>
+
+        <div id="loops-and-conditions" class="content-section paper-note">
+            <h3>Loops and Conditions</h3>
+            <p>Learn how to control the flow of your program using loops and conditions. In this section, we’ll discuss if-else statements, for loops, and while loops, and how to use them to make decisions and repeat tasks in your code.</p>
+        </div>
+
+        <div id="operators" class="content-section paper-note">
+            <h3>Operators</h3>
+            <p>Operators allow you to perform operations on variables and values. Python supports a variety of operators, including arithmetic, comparison, and logical operators. Learn how to use them effectively in your programs.</p>
+        </div>
+
+        <div id="input-and-output" class="content-section paper-note">
+            <h3>Input and Output</h3>
+            <p>Learn how to get input from users and display output in Python. This section covers the `input()` function and how to format and display text using the `print()` function.</p>
+        </div>
+
+        <div id="functions" class="content-section paper-note">
+            <h3>Functions</h3>
+            <p>Functions are blocks of code that only run when called. This section covers how to define functions, pass arguments to them, and return values. Functions help make your code more modular and reusable.</p>
+        </div>
+
+        <div id="classes-and-objects" class="content-section paper-note">
+            <h3>Classes and Objects</h3>
+            <p>In Python, you can define classes to create your own data types. Learn how to create and use objects, define methods, and understand object-oriented programming principles in Python.</p>
+        </div>
+
+        <div id="modules" class="content-section paper-note">
+            <h3>Modules and Packages</h3>
+            <p>Modules are Python files that contain code to be reused in other programs. This section explains how to import modules and use built-in Python packages to expand the functionality of your programs.</p>
+        </div>
+
+        <div id="exception-handling" class="content-section paper-note">
+            <h3>Exception Handling</h3>
+            <p>Exception handling allows you to handle runtime errors in your programs. This section explains how to use `try`, `except`, `else`, and `finally` to handle errors gracefully and prevent program crashes.</p>
+        </div>
+
+        <div id="file-handling" class="content-section paper-note">
+            <h3>File Handling</h3>
+            <p>Learn how to read from and write to files in Python. This section covers file opening, reading, writing, and closing operations, as well as handling different file types.</p>
+        </div>
+    </section>
+
+    <section id="search">
+        <h2>Search for Python Topics</h2>
+        <input type="text" id="search-box" placeholder="Search Python topics..." onkeyup="searchNotes()">
+        <ul id="search-results"></ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need help? Reach out to us at <a href="mailto:sahrohan101@gmail.com">sahrohan101@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Python Notes</p>
+    </footer>
+
+    <!-- Watermark -->
+    <div class="watermark">Created by Rohan</div>
+
+    <script>
+        function toggleSection(sectionId, clickedElement) {
+            // Check if the clicked topic is already active
+            const isActive = clickedElement.classList.contains('active');
+            
+            // Close all sections
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Remove bold from all topics
+            var topics = document.querySelectorAll('.topic');
+            topics.forEach(function(topic) {
+                topic.classList.remove('active');
+            });
+
+            if (!isActive) {
+                // Open the clicked section
+                var section = document.getElementById(sectionId);
+                section.classList.add('active');
+
+                // Apply bold effect to the clicked topic
+                clickedElement.classList.add('active');
+            }
+        }
+
+        function searchNotes() {
+            let input = document.getElementById('search-box').value.toLowerCase();
+            let results = document.getElementById('search-results');
+            results.innerHTML = '';
+
+            let notes = [
+                { name: "Introduction to Python", sectionId: "intro-to-python" },
+                { name: "Variables and Data Types", sectionId: "variables-and-data-types" },
+                { name: "Loops and Conditions", sectionId: "loops-and-conditions" },
+                { name: "Operators", sectionId: "operators" },
+                { name: "Input and Output", sectionId: "input-and-output" },
+                { name: "Functions", sectionId: "functions" },
+                { name: "Classes and Objects", sectionId: "classes-and-objects" },
+                { name: "Modules and Packages", sectionId: "modules" },
+                { name: "Exception Handling", sectionId: "exception-handling" },
+                { name: "File Handling", sectionId: "file-handling" }
+            ];
+
+            notes.forEach(function(note) {
+                if (note.name.toLowerCase().includes(input)) {
+                    let li = document.createElement('li');
+                    let link = document.createElement('a');
+                    link.href = "javascript:void(0);";
+                    link.classList.add('topic');
+                    link.onclick = function() { toggleSection(note.sectionId, link); };
+                    link.textContent = note.name;
+                    li.appendChild(link);
+                    results.appendChild(li);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
