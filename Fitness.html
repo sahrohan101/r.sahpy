@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Coaching</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .left {
+            flex: 1;
+            background: url('your-image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .left h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+        .left p {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .right {
+            flex: 1;
+            background: #2C3E2F;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.3s;
+            width: 80%;
+            text-align: center;
+        }
+        .button:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div>
+                <h1>AZTREUS COACHING</h1>
+                <p>Combining exercise and nutrition to help you build muscle faster</p>
+            </div>
+        </div>
+        <div class="right">
+            <a href="#" class="button">30-Day Routine for Beginners</a>
+            <a href="#" class="button">Kettlebell Training Program</a>
+            <a href="#" class="button">Bodyweight Training Program</a>
+            <a href="#" class="button">Personal Training</a>
+            <a href="#" class="button">About ABC Coaching</a>
+            <a href="#" class="button">Contact Us</a>
+        </div>
+    </div>
+</body>
+</html>
